@@ -1,3 +1,3 @@
 package com.kotlinkariam.model
 
-class World constructor(townList: MutableList<Island>)
+class World (var townList: MutableList<Island>)

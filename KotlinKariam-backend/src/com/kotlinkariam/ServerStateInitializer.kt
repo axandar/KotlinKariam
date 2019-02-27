@@ -18,6 +18,7 @@ class ServerStateInitializer{
             val island = Island(cities)
             val islands = mutableListOf<Island>()
             islands.add(island)
+
             return World(islands)
         }
     }
