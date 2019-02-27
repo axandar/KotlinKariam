@@ -13,7 +13,6 @@ import io.ktor.server.engine.applicationEngineEnvironment
 import io.ktor.server.engine.connector
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
-import playerHandler
 
 
 fun main(args: Array<String>) {
@@ -42,7 +41,7 @@ fun main(args: Array<String>) {
 
 fun Application.routes(){
     routing {
-        route("/playerHandler"){
+        route("/com.kotlinkariam.playerHandler"){
             playerHandler()
         }
     }
