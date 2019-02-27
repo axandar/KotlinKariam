@@ -1,3 +1,3 @@
 package com.kotlinkariam.model
 
-class City (name: String, buildings: MutableList<Building>)
+class City (var name: String, var buildings: MutableList<Building>)
