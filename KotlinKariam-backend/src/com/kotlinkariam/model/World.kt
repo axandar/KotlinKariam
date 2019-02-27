@@ -1,5 +1,3 @@
 package com.kotlinkariam.model
 
-class World constructor(townList: List<Island>) {
-
-}
+class World constructor(townList: MutableList<Island>)

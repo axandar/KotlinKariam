@@ -15,9 +15,9 @@ import io.ktor.server.engine.applicationEngineEnvironment
 import io.ktor.server.engine.connector
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
+import io.ktor.application.call
 
-var worldState = World(emptyList())
-
+var worldState = ServerStateInitializer.generateWorld()
 fun main(args: Array<String>) {
     val env = applicationEngineEnvironment {
         module {
