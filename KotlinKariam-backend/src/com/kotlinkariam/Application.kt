@@ -51,5 +51,9 @@ fun Application.routes(){
         route("/view"){
             view()
         }
+
+        route("/city"){
+
+        }
     }
 }
