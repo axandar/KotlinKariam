@@ -3,6 +3,8 @@ package com.kotlinkariam
 import com.fasterxml.jackson.core.util.DefaultIndenter
 import com.fasterxml.jackson.core.util.DefaultPrettyPrinter
 import com.fasterxml.jackson.databind.SerializationFeature
+import com.kotlinkariam.model.Island
+import com.kotlinkariam.model.World
 import io.ktor.application.Application
 import io.ktor.application.install
 import io.ktor.features.ContentNegotiation
@@ -14,6 +16,7 @@ import io.ktor.server.engine.connector
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 
+var worldState = World(emptyList())
 
 fun main(args: Array<String>) {
     val env = applicationEngineEnvironment {
@@ -41,8 +44,12 @@ fun main(args: Array<String>) {
 
 fun Application.routes(){
     routing {
-        route("/com.kotlinkariam.playerHandler"){
+        route("/playerHandler"){
             playerHandler()
+        }
+
+        route("/view"){
+            view()
         }
     }
 }
