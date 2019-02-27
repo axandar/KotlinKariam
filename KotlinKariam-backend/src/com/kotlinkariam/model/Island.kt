@@ -1,4 +1,3 @@
 package com.kotlinkariam.model
 
-class Island (cities: List<City>){
-}
+class Island (cities: MutableList<City>)
