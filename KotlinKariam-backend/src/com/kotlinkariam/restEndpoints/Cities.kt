@@ -12,7 +12,7 @@ fun Route.create() {
         post() {
             val buildings = mutableListOf<Building>()
             var city = City("MyCity", buildings)
-            worldState.
+            worldState.islandList[0].cities.add(city)
         }
     }
 }
