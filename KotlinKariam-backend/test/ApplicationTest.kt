@@ -1,17 +1,11 @@
 package com.kotlinkariam
 
-import io.ktor.application.*
-import io.ktor.response.*
-import io.ktor.request.*
-import io.ktor.routing.*
-import io.ktor.http.*
-import io.ktor.html.*
-import kotlinx.html.*
-import kotlinx.css.*
-import io.ktor.client.*
-import io.ktor.client.engine.apache.*
-import kotlin.test.*
-import io.ktor.server.testing.*
+/*import io.ktor.http.HttpStatusCode
+import io.ktor.server.testing.withTestApplication
+import io.netty.handler.codec.http.HttpMethod
+import junit.framework.Assert.assertEquals
+import org.junit.Test
+
 
 class ApplicationTest {
     @Test
@@ -23,4 +17,4 @@ class ApplicationTest {
             }
         }
     }
-}
+}*/
