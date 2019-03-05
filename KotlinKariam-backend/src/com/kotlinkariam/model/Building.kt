@@ -1,4 +1,6 @@
 package com.kotlinkariam.model
 
-class Building {
+import com.kotlinkariam.Enums.BuildingTypes
+
+class Building (val type: BuildingTypes){
 }
