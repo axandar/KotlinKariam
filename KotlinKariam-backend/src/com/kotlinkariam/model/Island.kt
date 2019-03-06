@@ -1,3 +1,3 @@
 package com.kotlinkariam.model
 
-class Island (var cities: MutableList<City>)
+class Island (val name: String, var cities: MutableList<City>)

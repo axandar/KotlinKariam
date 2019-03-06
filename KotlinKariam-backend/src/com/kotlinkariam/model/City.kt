@@ -1,3 +1,11 @@
 package com.kotlinkariam.model
 
-class City (var name: String, var buildings: MutableList<Building>)
+import com.kotlinkariam.Enums.BuildingTypes
+
+class City (var name: String, var buildings: MutableList<Building>) {
+
+    init {
+        buildings.add(Building(BuildingTypes.CityHall))
+    }
+
+}
