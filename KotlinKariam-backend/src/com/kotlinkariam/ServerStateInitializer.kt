@@ -8,12 +8,16 @@ import com.kotlinkariam.model.World
 class ServerStateInitializer{
 
     companion object {
-        fun generateWorld(): World {
-            val buildings = mutableListOf<Building>()
+        fun generateWorlds(): HashMap<Long, World> {
+            val world = generateWorld()
+            val map = hashMapOf<Long, World>()
+            map[1000] = world
+            return map
+        }
 
-            val city = City("test", buildings)
-            val cities = mutableListOf<City>()
-            cities.add(city)
+        private fun generateWorld(): World {
+            val city = City("test")
+            val cities = mutableListOf(city)
 
             val island = Island("Kotlinhos", cities)
             val islands = mutableListOf<Island>()
