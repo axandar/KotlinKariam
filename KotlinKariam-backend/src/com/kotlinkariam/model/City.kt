@@ -7,7 +7,7 @@ class City (val name: String) {
     lateinit var buildings: MutableList<Building>
 
     init {
-        buildings.add(Building(BuildingTypes.CityHall))
+        buildings.add(Building())
     }
 
 }
