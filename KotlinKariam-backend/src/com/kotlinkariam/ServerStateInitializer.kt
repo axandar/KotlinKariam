@@ -22,7 +22,7 @@ class ServerStateInitializer{
             val islands = mutableListOf<Island>()
             islands.add(island)
 
-            return World(islands)
+            return World("FirstWorld", islands)
         }
     }
 }

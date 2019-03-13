@@ -5,6 +5,7 @@ import com.fasterxml.jackson.core.util.DefaultPrettyPrinter
 import com.fasterxml.jackson.databind.SerializationFeature
 import com.kotlinkariam.restEndpoints.cityView
 import com.kotlinkariam.restEndpoints.islandView
+import com.kotlinkariam.restEndpoints.routes
 import com.kotlinkariam.restEndpoints.worldView
 import io.ktor.application.Application
 import io.ktor.application.install
@@ -41,24 +42,4 @@ fun main(args: Array<String>) {
     }
 
     embeddedServer(Netty, env).start(wait = true)
-}
-
-fun Application.routes(){
-    routing {
-        route("/playerHandler"){
-            playerHandler()
-        }
-
-        route("/world"){
-            worldView()
-        }
-
-        route("/island"){
-            islandView()
-        }
-
-        route("/city"){
-            cityView()
-        }
-    }
 }
