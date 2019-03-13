@@ -10,7 +10,7 @@ class ServerStateInitializer{
         fun generateWorlds(): HashMap<Long, World> {
             val world = generateWorld()
             val map = hashMapOf<Long, World>()
-            map[1000] = world
+            map[0] = world
             return map
         }
 
