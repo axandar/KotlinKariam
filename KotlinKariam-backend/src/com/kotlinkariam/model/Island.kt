@@ -1,3 +1,10 @@
 package com.kotlinkariam.model
 
-class Island (val name: String, var cities: MutableList<City>)
+class Island(islandName: String, cityList: MutableList<City>){
+
+    var islandName: String = islandName
+        private set
+
+    var cityList: MutableList<City> = cityList
+        private set
+}

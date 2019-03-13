@@ -1,6 +1,5 @@
 package com.kotlinkariam
 
-import com.kotlinkariam.model.Building
 import com.kotlinkariam.model.City
 import com.kotlinkariam.model.Island
 import com.kotlinkariam.model.World
