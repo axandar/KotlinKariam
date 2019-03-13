@@ -4,7 +4,6 @@ import com.kotlinkariam.model.City
 import com.kotlinkariam.model.Island
 import com.kotlinkariam.model.World
 import com.kotlinkariam.serverMemory
-import com.kotlinkariam.worldState
 import io.ktor.routing.Route
 import io.ktor.routing.get
 import io.ktor.routing.route

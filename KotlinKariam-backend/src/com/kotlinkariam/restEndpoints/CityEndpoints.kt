@@ -13,7 +13,7 @@ import io.ktor.routing.post
 import io.ktor.routing.route
 
 fun Route.create() {
-    route("/create") {
+    route("/city") {
         post() {
             var createCity = call.receive<CreateCity>()
             var city = City(createCity.name)

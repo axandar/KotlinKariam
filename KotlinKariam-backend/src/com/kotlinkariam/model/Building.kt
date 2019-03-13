@@ -2,7 +2,7 @@ package com.kotlinkariam.model
 
 import com.kotlinkariam.Enums.BuildingTypes
 
-class Building (){
+class Building (val type: BuildingTypes){
 
     lateinit var variable:String
 }
