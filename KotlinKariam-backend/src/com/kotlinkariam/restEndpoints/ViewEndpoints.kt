@@ -10,9 +10,17 @@ import io.ktor.routing.route
 import io.ktor.application.call
 import io.ktor.response.respond
 import io.ktor.response.respondText
+import io.ktor.routing.post
 
 
 fun Route.worldView() {
+    route("/createWorld/{worldName}"){
+        post{
+            val worldName: String = call.parameters["worldName"] ?: return@post
+            serverMemory.createWorld(worldName)
+        }
+    }
+
     route("/{worldID}"){
         get {
             val worldID: String = call.parameters["worldID"] ?: return@get
@@ -22,6 +30,14 @@ fun Route.worldView() {
                 call.respondText("World with id $worldID has not been found")
             }else {
                 call.respond(world)
+            }
+        }
+
+        route("/createIsland/{islandName}"){
+            post{
+                val worldID: String = call.parameters["worldID"] ?: return@post
+                val islandName: String = call.parameters["islandName"] ?: return@post
+                serverMemory.createIslandInWorld(islandName, worldID.toLong())
             }
         }
     }
@@ -40,6 +56,15 @@ fun Route.islandView() {
                         "has not been found")
             }else {
                 call.respond(island)
+            }
+        }
+
+        route("/createCity/{cityName}"){
+            post{
+                val worldID: String = call.parameters["worldID"] ?: return@post
+                val islandID: String = call.parameters["islandID"] ?: return@post
+                val cityName: String = call.parameters["cityName"] ?: return@post
+                serverMemory.createCityInIsland(cityName, worldID.toLong(), islandID.toInt())
             }
         }
     }

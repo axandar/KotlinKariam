@@ -1,6 +1,5 @@
 package com.kotlinkariam
 
-import com.kotlinkariam.model.Building
 import com.kotlinkariam.model.City
 import com.kotlinkariam.model.Island
 import com.kotlinkariam.model.World
@@ -22,7 +21,7 @@ class ServerStateInitializer{
             val islands = mutableListOf<Island>()
             islands.add(island)
 
-            return World(islands)
+            return World("Alpha", islands)
         }
     }
 }
