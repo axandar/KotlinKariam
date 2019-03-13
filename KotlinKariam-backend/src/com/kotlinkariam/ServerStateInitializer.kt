@@ -8,9 +8,11 @@ class ServerStateInitializer{
 
     companion object {
         fun generateWorlds(): HashMap<Long, World> {
-            val world = generateWorld()
             val map = hashMapOf<Long, World>()
+
+            val world = generateWorld()
             map[0] = world
+
             return map
         }
 
