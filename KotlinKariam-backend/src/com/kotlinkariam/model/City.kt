@@ -1,3 +1,6 @@
 package com.kotlinkariam.model
 
-class City (var name: String, var buildings: MutableList<Building>)
+class City(cityName: String){
+    var cityName: String = cityName
+        private set
+}

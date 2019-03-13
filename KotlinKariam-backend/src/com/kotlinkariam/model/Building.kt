@@ -1,4 +1,8 @@
 package com.kotlinkariam.model
 
-abstract class Building {
+import com.kotlinkariam.Enums.BuildingTypes
+
+class Building (){
+
+    lateinit var variable:String
 }
