@@ -19,12 +19,11 @@ class ServerStateInitializer{
         private fun generateWorld(): World {
             val city = City("test")
             val cities = mutableListOf(city)
-
             val island = Island("Kotlinhos", cities)
             val islands = mutableListOf<Island>()
             islands.add(island)
 
-            return World("FirstWorld", islands)
+            return World("Alpha", islands)
         }
     }
 }

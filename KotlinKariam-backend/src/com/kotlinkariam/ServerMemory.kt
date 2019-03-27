@@ -1,5 +1,7 @@
 package com.kotlinkariam
 
+import com.kotlinkariam.Enums.BuildingTypes
+import com.kotlinkariam.model.Building
 import com.kotlinkariam.model.City
 import com.kotlinkariam.model.Island
 import com.kotlinkariam.model.World
@@ -33,5 +35,11 @@ class ServerMemory constructor(var worlds: HashMap<Long, World>){
         val actualCities = getIslandByID(islandID, worldID)?.cityList ?: return //todo throw exception?
         val id = actualCities.size
         actualCities.add(id, City(cityName))
+    }
+
+    fun createBuilding(type: BuildingTypes, cityID: Int, islandID: Int, worldID: Long){
+        val actualBuildings = getCityByID(cityID, islandID, worldID)?.buildings ?:return //todo throw exception
+        val id = actualBuildings?.size
+        actualBuildings.add(id, Building(type))
     }
 }
